@@ -1,0 +1,54 @@
+body {
+  color: #bfc1c8;
+  font-family: "Roboto", "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1170px;
+}
+
+.forecast-container{
+  background: #323544;
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-top: 0px;
+  margin-bottom: 50px;
+}
+
+.forecast{
+  display: table-cell;
+  vertical-align: top;
+}
+
+.forecast-header{
+  background: rgba(0,0,0,.1);
+  padding: 10px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.forecast-icon{
+  height: 50px;
+}
+
+.forecast-content{
+  padding:  50px 20px 10px;
+  text-align: center;
+}
+
+.degree{
+  color: white;
+  font-weight: 700;
+}
+
+.forecast-icon{margin-bottom: 20px;}
