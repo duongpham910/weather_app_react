@@ -5,11 +5,12 @@ import './index.css';
 class Header extends BaseComponent {
 
   render() {
+    let logo_url = "http://res.cloudinary.com/duongph/image/upload/v1524922988/logo_oy9gbq.png";
     return (
       <div className="site-header">
         <div className="container">
           <a href="index.html" className="branding">
-            <img src="images/logo.png" alt="" className="logo" />
+            <img src={logo_url} alt="" className="logo" />
             <div className="logo-type">
               <h1 className="site-title">Weather app</h1>
               <small className="site-description">Viet Nam weather</small>

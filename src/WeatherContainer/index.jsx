@@ -14,12 +14,12 @@ class WeatherContainer extends BaseComponent {
   }
 
   loadCurrentWeather = () => {
-    let appId = process.env.REACT_APP_OPEN_WEATHER_KEY;
-    let location = 'Hanoi';
-    let url = 'http://api.openweathermap.org/data/2.5/weather?q=' + location + '&APPID=' + appId + '&units=metric';
-    let url2 = 'http://dataservice.accuweather.com/forecasts/v1/daily/5day/353412?apikey=AAb0wDrjc39jsyMYR0w3t2kYglFlK0UZ&language=vi&details=true&metric=true'
+    let key = process.env.REACT_APP_ACCUWEATHER_KEY;
+    let locationId = '353412';
+    let url = 'http://dataservice.accuweather.com/forecasts/v1/daily/5day/'
+      + locationId + '?apikey=' + key + '&language=vi&details=true&metric=true';
     $.ajax({
-      url: url2,
+      url: url,
       method: 'GET',
       success: (response) => {
         this.setState({
@@ -36,7 +36,7 @@ class WeatherContainer extends BaseComponent {
     return(
       <div className="site-content">
         <Header />
-        <div className="hero" data-bg-image="images/banner.png">
+        <div className="hero">
           <div className="container">
             <div className="find-location">
               <input type="text" placeholder="Find your location..."/>

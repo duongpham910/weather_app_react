@@ -115,6 +115,7 @@ a {
 }
 
 .hero {
+  background-image: url("http://res.cloudinary.com/duongph/image/upload/v1524926562/temp2_mkis6e.jpg");
   background-size: cover;
   padding: 70px 0;
   min-height: 210px;
