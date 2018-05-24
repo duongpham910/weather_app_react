@@ -5,22 +5,21 @@ import $ from 'jquery';
 import WeatherItem from './weatherItem';
 import Header from '../Header/index';
 import Autosuggest from 'react-autosuggest';
+import cities from './cities.json';
 
 class WeatherContainer extends BaseComponent {
   constructor(props) {
     super(props);
     this.state = {
       arrWeather: [],
-      location: '',
       value: '',
       suggestions: [],
-      cities: [],
     };
   }
 
   loadCurrentWeather = () => {
     let key = process.env.REACT_APP_ACCUWEATHER_KEY;
-    let locationId = '353412';
+    let locationId = cities.find(city => city.name === this.state.value).locationId;
     let url = 'https://dataservice.accuweather.com/forecasts/v1/daily/5day/'
       + locationId + '?apikey=' + key + '&language=vi&details=true&metric=true';
     $.ajax({
@@ -51,7 +50,7 @@ class WeatherContainer extends BaseComponent {
 
   onSuggestionsFetchRequested = ({ value }) => {
     this.setState({
-      suggestions: getSuggestions(value)
+      suggestions: this.getSuggestions(value)
     });
   };
 
@@ -61,29 +60,44 @@ class WeatherContainer extends BaseComponent {
     });
   };
 
-  componentDidMount() {
-    let key = process.env.REACT_APP_ACCUWEATHER_KEY;
-    let url = 'https://dataservice.accuweather.com/locations/v1/topcities/150'
-      + '?apikey=' + key;
-    $.ajax({
-      url: url,
-      method: 'GET',
-      success: (response) => {
-        this.setState({
-          cities: response
-        });
+  getSuggestions = (value) => {
+    const escapedValue = escapeRegexCharacters(value.trim());
 
-      },
-      error: (xhr, status, err) => {
-        console.log('false');
-      }
-    });
+    if (escapedValue === '') {
+      return [];
+    }
+
+    const regex = new RegExp('^' + escapedValue, 'i');
+
+    return cities.filter(city => regex.test(city.name));
   }
+
+
+  // componentDidMount() {
+  //   let key = process.env.REACT_APP_ACCUWEATHER_KEY;
+  //   let url = 'https://dataservice.accuweather.com/locations/v1/topcities/150'
+  //     + '?apikey=' + key;
+  //   $.ajax({
+  //     url: url,
+  //     method: 'GET',
+  //     success: (response) => {
+  //       let cities = response.map(city => new Object({locationId: city.Key, name: city.EnglishName}));
+  //       console.log(JSON.stringify(cities));
+  //       this.setState({
+  //         cities: cities
+  //       });
+
+  //     },
+  //     error: (xhr, status, err) => {
+  //       console.log('false');
+  //     }
+  //   });
+  // }
 
   render(){
     const { value, suggestions } = this.state;
     const inputProps = {
-      placeholder: "Type 'c'",
+      placeholder: "Type any",
       value,
       onChange: this.onChange
     };
@@ -123,80 +137,8 @@ class WeatherContainer extends BaseComponent {
 
 export default WeatherContainer
 
-const languages = [
-  {
-    name: 'C',
-    year: 1972
-  },
-  {
-    name: 'C#',
-    year: 2000
-  },
-  {
-    name: 'C++',
-    year: 1983
-  },
-  {
-    name: 'Clojure',
-    year: 2007
-  },
-  {
-    name: 'Elm',
-    year: 2012
-  },
-  {
-    name: 'Go',
-    year: 2009
-  },
-  {
-    name: 'Haskell',
-    year: 1990
-  },
-  {
-    name: 'Java',
-    year: 1995
-  },
-  {
-    name: 'Javascript',
-    year: 1995
-  },
-  {
-    name: 'Perl',
-    year: 1987
-  },
-  {
-    name: 'PHP',
-    year: 1995
-  },
-  {
-    name: 'Python',
-    year: 1991
-  },
-  {
-    name: 'Ruby',
-    year: 1995
-  },
-  {
-    name: 'Scala',
-    year: 2003
-  }
-];
-
-
 function escapeRegexCharacters(str) {
   return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
-function getSuggestions(value) {
-  const escapedValue = escapeRegexCharacters(value.trim());
-
-  if (escapedValue === '') {
-    return [];
-  }
-
-  const regex = new RegExp('^' + escapedValue, 'i');
-
-  return languages.filter(language => regex.test(language.name));
 }
 
 function getSuggestionValue(suggestion) {

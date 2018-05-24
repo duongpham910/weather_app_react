@@ -1,0 +1,602 @@
+[
+  {
+    "locationId": "28143",
+    "name": "Dhaka"
+  },
+  {
+    "locationId": "113487",
+    "name": "Kinshasa"
+  },
+  {
+    "locationId": "60449",
+    "name": "Santiago"
+  },
+  {
+    "locationId": "101924",
+    "name": "Beijing"
+  },
+  {
+    "locationId": "107487",
+    "name": "Bogota"
+  },
+  {
+    "locationId": "178087",
+    "name": "Berlin"
+  },
+  {
+    "locationId": "127164",
+    "name": "Cairo"
+  },
+  {
+    "locationId": "308526",
+    "name": "Madrid"
+  },
+  {
+    "locationId": "328328",
+    "name": "London"
+  },
+  {
+    "locationId": "182536",
+    "name": "Athens"
+  },
+  {
+    "locationId": "1123655",
+    "name": "Hong Kong"
+  },
+  {
+    "locationId": "208971",
+    "name": "Jakarta"
+  },
+  {
+    "locationId": "202396",
+    "name": "Delhi"
+  },
+  {
+    "locationId": "207375",
+    "name": "Baghdad"
+  },
+  {
+    "locationId": "226396",
+    "name": "Tokyo"
+  },
+  {
+    "locationId": "225058",
+    "name": "Pyongyang"
+  },
+  {
+    "locationId": "226081",
+    "name": "Seoul"
+  },
+  {
+    "locationId": "242560",
+    "name": "Mexico City"
+  },
+  {
+    "locationId": "264120",
+    "name": "Lima"
+  },
+  {
+    "locationId": "294021",
+    "name": "Moscow"
+  },
+  {
+    "locationId": "297030",
+    "name": "Riyadh"
+  },
+  {
+    "locationId": "300597",
+    "name": "Singapore"
+  },
+  {
+    "locationId": "318849",
+    "name": "Bangkok"
+  },
+  {
+    "locationId": "22889",
+    "name": "Sydney"
+  },
+  {
+    "locationId": "26216",
+    "name": "Melbourne"
+  },
+  {
+    "locationId": "45449",
+    "name": "Rio de Janeiro"
+  },
+  {
+    "locationId": "106577",
+    "name": "Shanghai"
+  },
+  {
+    "locationId": "204108",
+    "name": "Bengaluru"
+  },
+  {
+    "locationId": "204842",
+    "name": "Mumbai"
+  },
+  {
+    "locationId": "206671",
+    "name": "Chennai"
+  },
+  {
+    "locationId": "206690",
+    "name": "Kolkata"
+  },
+  {
+    "locationId": "222888",
+    "name": "Busan"
+  },
+  {
+    "locationId": "246562",
+    "name": "Yangon"
+  },
+  {
+    "locationId": "261158",
+    "name": "Karachi"
+  },
+  {
+    "locationId": "295212",
+    "name": "Saint Petersburg"
+  },
+  {
+    "locationId": "318251",
+    "name": "Istanbul"
+  },
+  {
+    "locationId": "353981",
+    "name": "Ho Chi Minh City"
+  },
+  {
+    "locationId": "305448",
+    "name": "Johannesburg"
+  },
+  {
+    "locationId": "4607",
+    "name": "Lagos"
+  },
+  {
+    "locationId": "347625",
+    "name": "Los Angeles"
+  },
+  {
+    "locationId": "349727",
+    "name": "New York"
+  },
+  {
+    "locationId": "4361",
+    "name": "Kabul"
+  },
+  {
+    "locationId": "16890",
+    "name": "Yerevan"
+  },
+  {
+    "locationId": "4651",
+    "name": "Luanda"
+  },
+  {
+    "locationId": "7894",
+    "name": "Buenos Aires"
+  },
+  {
+    "locationId": "31868",
+    "name": "Vienna"
+  },
+  {
+    "locationId": "51097",
+    "name": "Sofia"
+  },
+  {
+    "locationId": "43348",
+    "name": "Brasília"
+  },
+  {
+    "locationId": "28580",
+    "name": "Minsk"
+  },
+  {
+    "locationId": "122438",
+    "name": "Havana"
+  },
+  {
+    "locationId": "125594",
+    "name": "Prague"
+  },
+  {
+    "locationId": "125887",
+    "name": "Santo Domingo"
+  },
+  {
+    "locationId": "2093",
+    "name": "Algiers"
+  },
+  {
+    "locationId": "129846",
+    "name": "Quito"
+  },
+  {
+    "locationId": "623",
+    "name": "Paris"
+  },
+  {
+    "locationId": "171705",
+    "name": "Tbilisi"
+  },
+  {
+    "locationId": "189891",
+    "name": "Port-au-prince"
+  },
+  {
+    "locationId": "187423",
+    "name": "Budapest"
+  },
+  {
+    "locationId": "207931",
+    "name": "Dublin"
+  },
+  {
+    "locationId": "210841",
+    "name": "Tehran"
+  },
+  {
+    "locationId": "213490",
+    "name": "Rome"
+  },
+  {
+    "locationId": "224758",
+    "name": "Nairobi"
+  },
+  {
+    "locationId": "49785",
+    "name": "Phnom Penh"
+  },
+  {
+    "locationId": "245072",
+    "name": "Rabat"
+  },
+  {
+    "locationId": "246421",
+    "name": "Ulan Bator"
+  },
+  {
+    "locationId": "233776",
+    "name": "Kuala Lumpur"
+  },
+  {
+    "locationId": "264885",
+    "name": "Manila"
+  },
+  {
+    "locationId": "274663",
+    "name": "Warsaw"
+  },
+  {
+    "locationId": "287430",
+    "name": "Bucharest"
+  },
+  {
+    "locationId": "298198",
+    "name": "Belgrade"
+  },
+  {
+    "locationId": "308406",
+    "name": "Khartoum"
+  },
+  {
+    "locationId": "297442",
+    "name": "Dakar"
+  },
+  {
+    "locationId": "297120",
+    "name": "Mogadishu"
+  },
+  {
+    "locationId": "315078",
+    "name": "Taipei City"
+  },
+  {
+    "locationId": "324505",
+    "name": "Kyiv"
+  },
+  {
+    "locationId": "349269",
+    "name": "Montevideo"
+  },
+  {
+    "locationId": "351199",
+    "name": "Tashkent"
+  },
+  {
+    "locationId": "353020",
+    "name": "Caracas"
+  },
+  {
+    "locationId": "353412",
+    "name": "Hanoi"
+  },
+  {
+    "locationId": "355809",
+    "name": "Sana'a"
+  },
+  {
+    "locationId": "306633",
+    "name": "Cape Town"
+  },
+  {
+    "locationId": "353558",
+    "name": "Harare"
+  },
+  {
+    "locationId": "26797",
+    "name": "Perth"
+  },
+  {
+    "locationId": "42471",
+    "name": "Manaus"
+  },
+  {
+    "locationId": "45090",
+    "name": "Recife"
+  },
+  {
+    "locationId": "45881",
+    "name": "São Paulo"
+  },
+  {
+    "locationId": "55488",
+    "name": "Toronto"
+  },
+  {
+    "locationId": "113725",
+    "name": "Abidjan"
+  },
+  {
+    "locationId": "307297",
+    "name": "Barcelona"
+  },
+  {
+    "locationId": "225007",
+    "name": "Osaka-shi"
+  },
+  {
+    "locationId": "294459",
+    "name": "Novosibirsk"
+  },
+  {
+    "locationId": "313468",
+    "name": "Aleppo"
+  },
+  {
+    "locationId": "317663",
+    "name": "Dar es Salaam"
+  },
+  {
+    "locationId": "56186",
+    "name": "Montreal"
+  },
+  {
+    "locationId": "299429",
+    "name": "Jeddah"
+  },
+  {
+    "locationId": "348308",
+    "name": "Chicago"
+  },
+  {
+    "locationId": "351194",
+    "name": "Dallas"
+  },
+  {
+    "locationId": "321626",
+    "name": "Abu Dhabi"
+  },
+  {
+    "locationId": "6522",
+    "name": "Tirana"
+  },
+  {
+    "locationId": "33655",
+    "name": "La Paz"
+  },
+  {
+    "locationId": "55487",
+    "name": "Ottawa"
+  },
+  {
+    "locationId": "115295",
+    "name": "San Jose"
+  },
+  {
+    "locationId": "123094",
+    "name": "Copenhagen"
+  },
+  {
+    "locationId": "127964",
+    "name": "Tallinn"
+  },
+  {
+    "locationId": "133328",
+    "name": "Helsinki"
+  },
+  {
+    "locationId": "213225",
+    "name": "Jerusalem"
+  },
+  {
+    "locationId": "214971",
+    "name": "Kingston"
+  },
+  {
+    "locationId": "222343",
+    "name": "Astana"
+  },
+  {
+    "locationId": "311399",
+    "name": "Colombo"
+  },
+  {
+    "locationId": "231459",
+    "name": "Vilnius"
+  },
+  {
+    "locationId": "225780",
+    "name": "Riga"
+  },
+  {
+    "locationId": "230555",
+    "name": "Tripoli"
+  },
+  {
+    "locationId": "249758",
+    "name": "Amsterdam"
+  },
+  {
+    "locationId": "254946",
+    "name": "Oslo"
+  },
+  {
+    "locationId": "241809",
+    "name": "Kathmandu"
+  },
+  {
+    "locationId": "259549",
+    "name": "Panama City"
+  },
+  {
+    "locationId": "258848",
+    "name": "Port Moresby"
+  },
+  {
+    "locationId": "258278",
+    "name": "Islamabad"
+  },
+  {
+    "locationId": "275478",
+    "name": "San Juan"
+  },
+  {
+    "locationId": "274087",
+    "name": "Lisbon"
+  },
+  {
+    "locationId": "257012",
+    "name": "Asuncion"
+  },
+  {
+    "locationId": "314929",
+    "name": "Stockholm"
+  },
+  {
+    "locationId": "297345",
+    "name": "Bratislava"
+  },
+  {
+    "locationId": "130669",
+    "name": "San Salvador"
+  },
+  {
+    "locationId": "313854",
+    "name": "Dushanbe"
+  },
+  {
+    "locationId": "317036",
+    "name": "Ashgabat"
+  },
+  {
+    "locationId": "321398",
+    "name": "Tunis"
+  },
+  {
+    "locationId": "215854",
+    "name": "Tel Aviv"
+  },
+  {
+    "locationId": "202190",
+    "name": "Hyderabad"
+  },
+  {
+    "locationId": "252066",
+    "name": "Auckland"
+  },
+  {
+    "locationId": "347810",
+    "name": "Denver"
+  },
+  {
+    "locationId": "348211",
+    "name": "Honolulu"
+  },
+  {
+    "locationId": "53286",
+    "name": "Vancouver"
+  },
+  {
+    "locationId": "346835",
+    "name": "Anchorage"
+  },
+  {
+    "locationId": "347629",
+    "name": "San Francisco"
+  },
+  {
+    "locationId": "347936",
+    "name": "Miami"
+  },
+  {
+    "locationId": "351409",
+    "name": "Seattle"
+  },
+  {
+    "locationId": "355989",
+    "name": "St. John's"
+  },
+  {
+    "locationId": "27581",
+    "name": "Brussels"
+  },
+  {
+    "locationId": "47205",
+    "name": "Bujumbura"
+  },
+  {
+    "locationId": "190390",
+    "name": "Reykjavik"
+  },
+  {
+    "locationId": "361929",
+    "name": "Vientiane"
+  },
+  {
+    "locationId": "5003",
+    "name": "Male"
+  },
+  {
+    "locationId": "250938",
+    "name": "Wellington"
+  },
+  {
+    "locationId": "309398",
+    "name": "Paramaribo"
+  },
+  {
+    "locationId": "3484",
+    "name": "Dili"
+  },
+  {
+    "locationId": "205110",
+    "name": "Banda Aceh"
+  },
+  {
+    "locationId": "124697",
+    "name": "Nicosia"
+  },
+  {
+    "locationId": "178535",
+    "name": "Gibraltar"
+  },
+  {
+    "locationId": "2094",
+    "name": "Pago Pago"
+  }
+]
