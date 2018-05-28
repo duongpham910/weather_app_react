@@ -3,6 +3,7 @@ import BaseComponent from '../BaseComponent';
 import './index.css';
 import $ from 'jquery';
 import WeatherItem from './weatherItem';
+import TodayItem from './todayItem';
 import Header from '../Header/index';
 import Autosuggest from 'react-autosuggest';
 import cities from './cities.json';
@@ -18,8 +19,30 @@ class WeatherContainer extends BaseComponent {
   }
 
   loadCurrentWeather = () => {
+    this.state.value === '' ? this.loadLocation() : this.requestAPI(this.state.value)
+  }
+
+  loadLocation = () => {
+    let url = 'https://ipinfo.io/geo';
+    $.ajax({
+      url: url,
+      method: 'GET',
+      json: true,
+      success: (response) => {
+        this.setState({
+          value: response.city
+        });
+        this.requestAPI(response.city)
+      },
+      error: (xhr, status, err) => {
+        console.log('false');
+      }
+    });
+  }
+
+  requestAPI = (cityName) => {
     let key = process.env.REACT_APP_ACCUWEATHER_KEY;
-    let locationId = cities.find(city => city.name === this.state.value).locationId;
+    let locationId = cities.find(city => city.name === cityName).locationId;
     let url = 'https://dataservice.accuweather.com/forecasts/v1/daily/5day/'
       + locationId + '?apikey=' + key + '&language=vi&details=true&metric=true';
     $.ajax({
@@ -97,7 +120,7 @@ class WeatherContainer extends BaseComponent {
   render(){
     const { value, suggestions } = this.state;
     const inputProps = {
-      placeholder: "Type any",
+      placeholder: "Find your location...",
       value,
       onChange: this.onChange
     };
@@ -125,7 +148,11 @@ class WeatherContainer extends BaseComponent {
           <div className="forecast-container">
             {
               this.state.arrWeather.map((weather, index) => {
-                return (<WeatherItem weather={weather} key={index}/>)
+                if (index === 0) {
+                  return (<TodayItem weather={weather} key={index}/>)
+                } else {
+                  return (<WeatherItem weather={weather} key={index}/>)
+                }
               })
             }
           </div>
