@@ -59,6 +59,15 @@ a {
 .forecast-container .forecast.today {
   width: 420px;
 }
+
+.forecast-container .forecast.today .forecast-header:after {
+  content : " ";
+  clear   : both;
+  display : block;
+  overflow: hidden;
+  height  : 0;
+}
+
 .forecast-container .forecast.today .forecast-header .day {
   float: left;
 }
@@ -71,6 +80,7 @@ a {
   padding-bottom: 30px;
 }
 .forecast-container .forecast.today .location {
+  font-size: 18px;
   font-weight: 400;
 }
 .forecast-container .forecast.today .degree .num, .forecast-container .forecast.today .degree .forecast-icon {
@@ -78,6 +88,7 @@ a {
   vertical-align: middle;
 }
 .forecast-container .forecast.today .degree .num {
+  font-size: 90px;
   margin-right: 30px;
 }
 .forecast-container .forecast.today span {
