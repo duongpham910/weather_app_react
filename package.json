@@ -6,6 +6,7 @@
   "license": "ISC",
   "main": "src/index.js",
   "dependencies": {
+    "axios": "^0.18.0",
     "immutability-helper": "^2.6.6",
     "jquery": "^3.3.1",
     "moment": "^2.22.1",
