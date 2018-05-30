@@ -1,7 +1,7 @@
 import React from 'react';
 import BaseComponent from '../BaseComponent';
 import './index.css';
-import $ from 'jquery';
+import axios from 'axios';
 import WeatherItem from './weatherItem';
 import TodayItem from './todayItem';
 import Header from '../Header/index';
@@ -24,40 +24,33 @@ class WeatherContainer extends BaseComponent {
 
   loadLocation = () => {
     let url = 'https://ipinfo.io/geo';
-    $.ajax({
-      url: url,
-      method: 'GET',
-      json: true,
-      success: (response) => {
-        this.setState({
-          value: response.city
-        });
-        this.requestAPI(response.city)
-      },
-      error: (xhr, status, err) => {
-        console.log('false');
-      }
-    });
+    axios.get(url)
+    .then(response => {
+      this.setState({
+        value: response.data.city
+      });
+      this.requestAPI(response.city);
+    })
+    .catch(error => {
+      console.error(error);
+    })
   }
 
   requestAPI = (cityName) => {
-    if (cities.find(city => city.name !== cityName) === undefined ) {
+    if (cities.find(city => city.name === cityName) !== undefined ) {
       let key = process.env.REACT_APP_ACCUWEATHER_KEY;
       let locationId = cities.find(city => city.name === cityName).locationId;
       let url = 'https://dataservice.accuweather.com/forecasts/v1/daily/5day/'
         + locationId + '?apikey=' + key + '&language=vi&details=true&metric=true';
-      $.ajax({
-        url: url,
-        method: 'GET',
-        success: (response) => {
-          this.setState({
-            arrWeather: response.DailyForecasts
-          });
-        },
-        error: (xhr, status, err) => {
-          console.log('false');
-        }
-      });
+      axios.get(url)
+      .then(response => {
+        this.setState({
+          arrWeather: response.data.DailyForecasts
+        });
+      })
+      .catch(error => {
+        console.error(error);
+      })
     }
   }
 
