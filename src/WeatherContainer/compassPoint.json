@@ -1,0 +1,134 @@
+[
+  {
+    "direction": "North",
+    "abbreviation": "N"
+  },
+  {
+    "direction": "North by east",
+    "abbreviation": "NbE"
+  },
+  {
+    "direction": "North-northeast",
+    "abbreviation": "NNE"
+  },
+  {
+    "direction": "Northeast by north",
+    "abbreviation": "NEbN"
+  },
+  {
+    "direction": "Northeast",
+    "abbreviation": "NE"
+  },
+  {
+    "direction": "Northeast by east",
+    "abbreviation": "NbE"
+  },
+  {
+    "direction": "North by east",
+    "abbreviation": "NbE"
+  },
+  {
+    "direction": "East-northeast",
+    "abbreviation": "ENE"
+  },
+  {
+    "direction": "East by north",
+    "abbreviation": "EbN"
+  },
+  {
+    "direction": "East",
+    "abbreviation": "E"
+  },
+  {
+    "direction": "East by south",
+    "abbreviation": "EbS"
+  },
+  {
+    "direction": "East-southeast",
+    "abbreviation": "ESE"
+  },
+  {
+    "direction": "Southeast by east",
+    "abbreviation": "SEbE"
+  },
+  {
+    "direction": "Southeast",
+    "abbreviation": "SE"
+  },
+  {
+    "direction": "Southeast by south",
+    "abbreviation": "SEbS"
+  },
+  {
+    "direction": "South-southeast",
+    "abbreviation": "SSE"
+  },
+  {
+    "direction": "South by east",
+    "abbreviation": "SbE"
+  },
+  {
+    "direction": "South",
+    "abbreviation": "S"
+  },
+  {
+    "direction": "South by west",
+    "abbreviation": "SbW"
+  },
+  {
+    "direction": "South-southwest",
+    "abbreviation": "SSW"
+  },
+  {
+    "direction": "Southwest by south",
+    "abbreviation": "SWbS"
+  },
+  {
+    "direction": "Southwest",
+    "abbreviation": "SW"
+  },
+  {
+    "direction": "Southwest by west",
+    "abbreviation": "SWbW"
+  },
+  {
+    "direction": "West-southwest",
+    "abbreviation": "WSW"
+  },
+  {
+    "direction": "West by south",
+    "abbreviation": "WbS"
+  },
+  {
+    "direction": "West",
+    "abbreviation": "W"
+  },
+  {
+    "direction": "West by north",
+    "abbreviation": "WbN"
+  },
+  {
+    "direction": "West-northwest",
+    "abbreviation": "WNW"
+  },
+  {
+    "direction": "Northwest by west",
+    "abbreviation": "NWbW"
+  },
+  {
+    "direction": "Northwest",
+    "abbreviation": "NW"
+  },
+  {
+    "direction": "Northwest by north",
+    "abbreviation": "NWbN"
+  },
+  {
+    "direction": "North-northwest",
+    "abbreviation": "NNW"
+  },
+  {
+    "direction": "North by west",
+    "abbreviation": "NbW"
+  }
+]

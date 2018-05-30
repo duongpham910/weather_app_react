@@ -41,28 +41,24 @@ class WeatherContainer extends BaseComponent {
   }
 
   requestAPI = (cityName) => {
-    let key = process.env.REACT_APP_ACCUWEATHER_KEY;
-    let locationId = cities.find(city => city.name === cityName).locationId;
-    let url = 'https://dataservice.accuweather.com/forecasts/v1/daily/5day/'
-      + locationId + '?apikey=' + key + '&language=vi&details=true&metric=true';
-    $.ajax({
-      url: url,
-      method: 'GET',
-      success: (response) => {
-        this.setState({
-          arrWeather: response.DailyForecasts
-        });
-      },
-      error: (xhr, status, err) => {
-        console.log('false');
-      }
-    });
-  }
-
-  handleChange = (event) => {
-    this.setState({
-      location: event.target.value
-    });
+    if (cities.find(city => city.name !== cityName) === undefined ) {
+      let key = process.env.REACT_APP_ACCUWEATHER_KEY;
+      let locationId = cities.find(city => city.name === cityName).locationId;
+      let url = 'https://dataservice.accuweather.com/forecasts/v1/daily/5day/'
+        + locationId + '?apikey=' + key + '&language=vi&details=true&metric=true';
+      $.ajax({
+        url: url,
+        method: 'GET',
+        success: (response) => {
+          this.setState({
+            arrWeather: response.DailyForecasts
+          });
+        },
+        error: (xhr, status, err) => {
+          console.log('false');
+        }
+      });
+    }
   }
 
   onChange = (event, { newValue, method }) => {
@@ -149,7 +145,7 @@ class WeatherContainer extends BaseComponent {
             {
               this.state.arrWeather.map((weather, index) => {
                 if (index === 0) {
-                  return (<TodayItem weather={weather} key={index}/>)
+                  return (<TodayItem weather={weather} key={index} location={this.state.value}/>)
                 } else {
                   return (<WeatherItem weather={weather} key={index}/>)
                 }
