@@ -19,7 +19,7 @@ class WeatherContainer extends BaseComponent {
   }
 
   loadCurrentWeather = () => {
-    this.state.value === '' ? this.loadLocation() : this.requestAPI(this.state.value)
+    this.state.value === '' || (cities.find(city => city.name === this.state.value) === undefined) ? this.loadLocation() : this.requestAPI(this.state.value)
   }
 
   loadLocation = () => {
@@ -29,7 +29,7 @@ class WeatherContainer extends BaseComponent {
       this.setState({
         value: response.data.city
       });
-      this.requestAPI(response.city);
+      this.requestAPI(response.data.city);
     })
     .catch(error => {
       console.error(error);
@@ -37,7 +37,7 @@ class WeatherContainer extends BaseComponent {
   }
 
   requestAPI = (cityName) => {
-    if (cities.find(city => city.name === cityName) !== undefined ) {
+    if (cities.find(city => city.name === cityName) !== undefined) {
       let key = process.env.REACT_APP_ACCUWEATHER_KEY;
       let locationId = cities.find(city => city.name === cityName).locationId;
       let url = 'https://dataservice.accuweather.com/forecasts/v1/daily/5day/'
@@ -83,28 +83,6 @@ class WeatherContainer extends BaseComponent {
 
     return cities.filter(city => regex.test(city.name));
   }
-
-
-  // componentDidMount() {
-  //   let key = process.env.REACT_APP_ACCUWEATHER_KEY;
-  //   let url = 'https://dataservice.accuweather.com/locations/v1/topcities/150'
-  //     + '?apikey=' + key;
-  //   $.ajax({
-  //     url: url,
-  //     method: 'GET',
-  //     success: (response) => {
-  //       let cities = response.map(city => new Object({locationId: city.Key, name: city.EnglishName}));
-  //       console.log(JSON.stringify(cities));
-  //       this.setState({
-  //         cities: cities
-  //       });
-
-  //     },
-  //     error: (xhr, status, err) => {
-  //       console.log('false');
-  //     }
-  //   });
-  // }
 
   render(){
     const { value, suggestions } = this.state;
